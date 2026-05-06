@@ -1,4 +1,4 @@
-"""
+from django.views.generic.base import RedirectView
 urls.py — Rutas de la API del conjunto
 """
 
@@ -39,5 +39,6 @@ urlpatterns = [
 
     # ViewSets
     path('api/', include(router.urls)),
+path('', RedirectView.as_view(url='admin/'), name='index'),
 path('', RedirectView.as_view(url='admin/'), name='index'),
 ]
