@@ -39,4 +39,5 @@ urlpatterns = [
 
     # ViewSets
     path('api/', include(router.urls)),
+path('', RedirectView.as_view(url='admin/'), name='index'),
 ]
