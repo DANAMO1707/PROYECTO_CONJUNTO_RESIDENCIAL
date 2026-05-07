@@ -13,7 +13,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # ── Seguridad (desarrollo local) ──────────────────────────────────────────────
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-dev-clave-local-conjunto-residencial-2026')
 DEBUG = False
-ALLOWED_HOSTS = ['proyecto-conjunto-residencial.onrender.com', '.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['proyecto-conjunto-residencial.onrender.com', 'localhost', '127.0.0.1']
 # ── Aplicaciones ──────────────────────────────────────────────────────────────
 INSTALLED_APPS = [
     'django.contrib.admin',
