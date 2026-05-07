@@ -8,15 +8,11 @@ from pathlib import Path
 from datetime import timedelta
 import os
 
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # ── Seguridad (desarrollo local) ──────────────────────────────────────────────
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-dev-clave-local-conjunto-residencial-2026')
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['proyecto-conjunto-residencial.onrender.com', '.onrender.com', 'localhost', '127.0.0.1']
 # ── Aplicaciones ──────────────────────────────────────────────────────────────
 INSTALLED_APPS = [
@@ -87,8 +83,9 @@ SIMPLE_JWT = {
 CORS_ALLOW_ALL_ORIGINS = True
 
 # ── Archivos estáticos y media ────────────────────────────────────────────────
-STATIC_URL  = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MEDIA_URL   = '/media/'
 MEDIA_ROOT  = BASE_DIR / 'media'
