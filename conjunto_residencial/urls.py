@@ -1,5 +1,5 @@
 from django.views.generic.base import RedirectView
-urls.py — Rutas de la API del conjunto
+urls.py - Rutas de la API del conjunto
 """
 
 from django.urls import path, include
